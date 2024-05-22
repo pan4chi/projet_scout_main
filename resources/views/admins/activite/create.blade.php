@@ -140,6 +140,7 @@
                     <th for="type_d_activité">Type d'activité :</th>
                     <td for="type_d_activité">
                         <select name="type_d_activité">
+                            <option disabled selected>Sélectionnez un type</option>
                             <option value="Culturel" {{ old('type_d_activité') == 'Culturel' ? 'selected' : '' }}>Culturel</option>
                             <option value="Éducatif" {{ old('type_d_activité') == 'Éducatif' ? 'selected' : '' }}>Éducatif</option>
                             <option value="Scout" {{ old('type_d_activité') == 'Scout' ? 'selected' : '' }}>Scout</option>
