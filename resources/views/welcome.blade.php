@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>bienvenu a page d'accueil</title>
+    <title>مرحبا بكم في صفحة الاستقبال</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link href="assets/imgs/favicon.png" rel="icon">
-    <link href="assets/imgs/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="img/scout.png" rel="icon">
+    {{-- <link href="assets/imgs/apple-touch-icon.png" rel="apple-touch-icon"> --}}
 
     <!-- Google Fonts -->
     <link
-        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500,600,600,700,700i"
         rel="stylesheet">
 
     <!-- Vendor CSS Files -->
@@ -35,23 +35,25 @@
         <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
             <a href="/" class="logo d-flex align-items-center">
-                <img src="assets/imgs/logo.png" alt="">
-                <span>Association Scout du Maroc</span>
+                <img src="img/scout.png" alt="">
+                <span>
+        الجامعة
+                 الوطنية للكشفية المغربية</span>
             </a>
 
             <nav id="navbar" class="navbar">
                 <ul>
-                    <li><a class="nav-link scrollto active" href="/">Home</a></li>
+                    <li><a class="nav-link scrollto active" href="/">الرئيسية</a></li>
                     @guest
-                        <li><a class="getstarted scrollto" href="{{ route('login') }}">Se connecter</a></li>
+                        <li><a class="getstarted scrollto" href="{{ route('login') }}">تسجيل الدخول</a></li>
                     @else
-                        <li><a class="nav-link scrollto" href="{{ route('login') }}">Dashboard</a></li>
+                        <li><a class="nav-link scrollto" href="{{ route('login') }}">لوحة التحكم</a></li>
                         <li>
                             <form id="log_out" method="POST" action="{{ route('logout') }}">
                                 @csrf
                             </form>
                             <a class="getstarted scrollto" onclick="document.getElementById('log_out').submit()"
-                                href="#">Se déconnecter</a>
+                                href="#">تسجيل الخروج</a>
                         </li>
                     @endguest
                 </ul>
@@ -70,18 +72,17 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 d-flex flex-column justify-content-center">
-                    <h1 data-aos="fade-up"> Bienvenue !!! </h1>
-                    <h2 data-aos="fade-up" data-aos-delay="400"> Appuyez sur le bouton pour  
-                        vous connecter !!!</h2>
+                    <h1 data-aos="fade-up"> أهلا وسهلا بك </h1>
+                    <h2 data-aos="fade-up" data-aos-delay="400"><bdi>!!!</bdi> اضغط على الزر لتسجيل الدخول </h2>
                     <div data-aos="fade-up" data-aos-delay="600">
                         <div class="text-center text-lg-start">
                             <a href="{{route("login")}}"
                                 class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
                             @guest
 
-                                <span>Se connecter</span>
+                                <span>تسجيل الدخول</span>
                                 @else
-                                <span>Naviguer sur l'application</span>
+                                <span>التنقل في التطبيق</span>
                                 @endguest
 
                                 <i class="bi bi-arrow-right"></i>
@@ -108,19 +109,15 @@
             <div class="container">
                 <div class="row gy-4">
                     <div class="col-lg-8 col-md-12 footer-info">
-                        <a href="index.html" class="logo d-flex align-items-center">
+                        <a href="" class="logo d-flex align-items-center">
                             <img src="assets/img/logo.png" alt="">
                             <span>ASM</span>
                         </a>
-                        <p>ASM est une association publique forte de plus de 3 ans d'expérience dans l'enregistrement
-                            des noms de domaine, le déploiement et la gestion des plates-formes d'hébergement web de
-                            pointe.
-                            <br>
-                            Notre entreprise est en pleine expansion et ne fait appel qu'aux experts les plus compétents
-                            pour assurer aux clients un service de qualité inégalée et une meilleure présence sur le
-                            web.
-                        </p>
-
+                        <p> <b>
+                            الجامعة الوطنية للكشفية المغربية <bdo>(ASM)</bdo> هي منظمة وطنية غير ربحية تهدف إلى تربية الشباب المغربي على القيم الأخلاقية والوطنية، وتنمية مهاراتهم و قدراتهم، وتشجيعهم على المشاركة في الحياة العامة
+                            . تُقدم <bdo>ASM</bdo> برنامجًا شاملاً للنشاطات الكشفية، بما في ذلك المخيمات، والرحلات، والأنشطة الاجتماعية، والخدمة المجتمعية، التي تُساهم في تنمية شخصياتهم و قدراتهم، وتُنمي
+                             فيهم روح العمل الجماعي والمسؤولية.
+                       </b> </p>
 
                     </div>
 
@@ -130,12 +127,12 @@
 
                     <div class="col-lg-4 col-md-12 footer-contact items-end  ">
                         <div class=" text-end  text-md-start flex w-1/2 ">
-                        <h4>Contact-nous</h4>
+                        <h4>اتصل بنا</h4>
                         <p>
-                            2ème étage N°6, Immeuble Safwa, <br>
-                            Boulevard, Avenue Hassan 1er، <br>
-                            Agadir 80000<br>
-                            <strong>Phone:</strong> 05282-13045<br>
+                            الطابق الثاني رقم 6، مبنى صفوة، <br>
+                            شارع، جادة الحسن الأول، <br>
+                            أكادير 80000<br>
+                        <bdi>05282-13045</bdi> <strong>: هاتف</strong>  <br>
                         </p>
                     </div>
                     </div>
@@ -146,7 +143,7 @@
 
         <div class="container">
             <div class="copyright">
-                &copy; Copyright <strong><span>ASM</span></strong>. All Rights Reserved
+            <bdi>2024©  ASM </bdi>      جميع الحقوق محفوظة لموقع
             </div>
 
         </div>
